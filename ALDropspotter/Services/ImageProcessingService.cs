@@ -52,56 +52,55 @@ namespace ALDropspotter.Services
         // Function to extract text from image, returns a dictionary <string, string> with the text
         public Dictionary<string, string> ExtractTextFromImage(string imagePath)
         {
-            // Dictionary containing texts
             var result = new Dictionary<string, string>();
-
-            // Load the image
             var image = new Image<Bgr, byte>(imagePath);
-
-            // Get the rectangles
             var rectangles = GetRectangles();
 
             var debugFolderPath = "tmpImages";
 
-            // Loop over the rectangles
-            foreach (var rectangle in rectangles)
+            // Create tasks for each rectangle
+            var tasks = rectangles.Select(async rectangle =>
             {
                 var croppedImage = image.Copy(rectangle.Value);
 
-                // Turn image into grayscale
                 var grayscaleImage = croppedImage.Convert<Gray, byte>();
 
                 if (rectangle.Key == "map_name")
                 {
-                    // Binarize image
                     grayscaleImage = grayscaleImage.ThresholdBinary(new Gray(100), new Gray(255));
                 }
 
-                // Remove artifacts
                 grayscaleImage = grayscaleImage.Erode(1);
 
-                // Convert the cropped image to a bitmap
                 var bitmap = grayscaleImage.ToBitmap();
 
                 string directory = "tmpImages";
                 string filename = $"{rectangle.Key}.png";
                 string path = Path.Combine(directory, filename);
 
-                // Save the bitmap image to folder tmpImages for debugging
                 Directory.CreateDirectory(directory);
                 bitmap.Save(path, System.Drawing.Imaging.ImageFormat.Png);
 
-                // Use Tesseract to extract text from the bitmap
+                string text;
                 using (var engine = new TesseractEngine("tessdata", "eng", EngineMode.Default))
                 {
                     using (var page = engine.Process(bitmap))
                     {
-                        var text = page.GetText().Trim();
-                        Debug.WriteLine($"Text for {rectangle.Key}: {text}");
-                        // Add the text to the dictionary
-                        result.Add(rectangle.Key, text);
+                        text = page.GetText().Trim();
                     }
                 }
+
+                return (rectangle.Key, text);
+            });
+
+            // Wait for all tasks to complete
+            Task.WaitAll(tasks.ToArray());
+
+            // Add results to dictionary
+            foreach (var (key, value) in tasks.Select(t => t.Result))
+            {
+                result[key] = value;
+                Debug.WriteLine($"{key}: {value}");
             }
 
             return result;
