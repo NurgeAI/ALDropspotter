@@ -1,0 +1,28 @@
+﻿<Page x:Class="ALDropspotter.Views.ImageDropPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ALDropspotter.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+      AllowDrop="True"
+      DragEnter="Image_DragEnter"
+      Drop="Image_Drop">
+
+    <Page.Background>
+        <SolidColorBrush Color="#1D2335" />
+    </Page.Background>
+
+    <Grid>
+        <!-- Rectangle surrounding the texblock, has an dash border and is transparent -->
+        <Rectangle Width="350" Height="200" StrokeDashArray="10 10" Stroke="White" StrokeThickness="2" Opacity="0.5" />
+
+        <!-- Textblock that is centered in the rectangle and has a white foreground -->
+        <TextBlock Text="Choose a file or drag it here"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Foreground="White"
+                    FontSize="20" />
+    </Grid>
+</Page>
