@@ -36,6 +36,7 @@ namespace ALDropspotter.Views
         };
         public string LobbyImagePath { get; set; }
         private ImageProcessingService imageProcessor = new();
+        private DropspotMatchingService dropspotMatcher = new();
 
         public void loadImage(String imagePath)
         {
@@ -48,6 +49,35 @@ namespace ALDropspotter.Views
             // Get the map name from the text
             String mapName = lobbyText["map_name"];
             Debug.WriteLine("Map name: " + mapName);
+
+            // Get dropspot matches (everything else)
+            Dictionary<String, String> dropspots = lobbyText.Where(x => x.Key.StartsWith("team_")).ToDictionary(x => x.Key, x => x.Value);
+
+            // Loop over all dropspots and print them
+            Debug.WriteLine("Dropspots:");
+            foreach (KeyValuePair<String, String> dropspot in dropspots)
+            {
+                Debug.WriteLine(dropspot.Key + ": " + dropspot.Value);
+            }
+
+
+            // Match the dropspots
+            Dictionary<String, String> matchedValues = dropspotMatcher.GetDropspotMatches(mapName, dropspots);
+            // Loop over all dropspots and print them
+            Debug.WriteLine("Matched values:");
+            foreach (KeyValuePair<String, String> dropspot in matchedValues)
+            {
+                Debug.WriteLine(dropspot.Key + ": " + dropspot.Value);
+            }
+
+            // Get the free dropspots
+            Dictionary<String, String> freeDropspots = dropspotMatcher.GetFreeDropspots(matchedValues);
+            // Loop over all dropspots and print them
+            Debug.WriteLine("Free dropspots:");
+            foreach (KeyValuePair<String, String> dropspot in freeDropspots)
+            {
+                Debug.WriteLine(dropspot.Value);
+            }
 
             // Display the map
             //BitmapImage bitmapImage = new BitmapImage();
