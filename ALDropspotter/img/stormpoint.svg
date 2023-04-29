@@ -1,0 +1,104 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="stormpoint">
+<path id="north_pad_border" d="M171.891 199.972L211.345 105.508C212.739 102.171 216.315 100.304 219.849 101.067L333.61 125.64C336.695 126.306 339.033 128.833 339.459 131.96L350.435 212.673C350.851 215.734 349.347 218.738 346.646 220.239L246.186 276.062C243.205 277.719 239.481 277.155 237.123 274.69L173.391 208.046C171.331 205.892 170.742 202.723 171.891 199.972Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="downed_beast_border" d="M47.4608 342.258L100.207 250.81C101.923 247.834 105.44 246.405 108.745 247.34L198.795 272.818C202.627 273.902 204.943 277.79 204.072 281.676L184.811 367.564C184.372 369.522 183.166 371.223 181.463 372.286L143.833 395.765C141.608 397.152 138.821 397.278 136.481 396.096L50.5758 352.699C46.733 350.758 45.3097 345.987 47.4608 342.258Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="mill_border" d="M98.6002 499.819L127.478 432.541C128.985 429.03 132.89 427.213 136.546 428.322L222.846 454.483C226.6 455.621 228.843 459.459 227.992 463.287L216.543 514.807C216.042 517.059 214.533 518.955 212.451 519.949L175.293 537.674C173.357 538.597 171.12 538.647 169.145 537.813L102.573 509.686C98.7422 508.067 96.9598 503.64 98.6002 499.819Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="cenote_border" d="M85.5736 746.854L140.501 639.005C142.319 635.434 146.623 633.924 150.274 635.575L236.003 674.336C239.84 676.071 241.497 680.625 239.672 684.42L202.019 762.727C201.129 764.578 199.519 765.982 197.565 766.614L146.644 783.065C144.788 783.665 142.772 783.518 141.022 782.656L88.9409 756.985C85.1911 755.136 83.6764 750.579 85.5736 746.854Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="shipfall_border" d="M415.631 924.674L507.902 819.253C510.106 816.735 513.712 815.982 516.739 817.407L575.929 845.261C580.1 847.224 581.53 852.45 578.938 856.263L502.81 968.262C500.754 971.287 496.816 972.388 493.49 970.867L418.157 936.435C413.591 934.348 412.324 928.452 415.631 924.674Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="antenna_border" d="M542.421 638.275L661.013 665.339C666.269 666.538 668.58 672.725 665.4 677.077L613.694 747.821C612.833 748.998 611.648 749.899 610.284 750.413L546.614 774.408C541.787 776.227 536.608 772.744 536.472 767.587L533.255 645.785C533.126 640.89 537.647 637.185 542.421 638.275Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="fish_farms_border" d="M752.869 789.125L789.623 761.504C790.923 760.528 792.504 760 794.129 760H916.801C920.773 760 924.056 763.097 924.288 767.062L927.966 829.889C928.139 832.846 926.556 835.627 923.926 836.988L835.032 883.004C833.477 883.809 831.688 884.045 829.977 883.669L755.768 867.392C752.327 866.638 749.875 863.59 749.875 860.067V795.121C749.875 792.762 750.984 790.542 752.869 789.125Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="gale_station_border" d="M600.301 799.7L667.16 775.266C669.345 774.468 671.777 774.728 673.743 775.971L706.234 796.514C708.213 797.765 709.494 799.87 709.697 802.203L713.812 849.464C714.077 852.508 712.469 855.408 709.747 856.796L678.714 872.619C677.124 873.43 675.296 873.647 673.56 873.231L601.128 855.878C597.754 855.07 595.375 852.054 595.375 848.585V806.744C595.375 803.595 597.343 800.781 600.301 799.7Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="launch_pad_border" d="M728.991 612.095L811.565 586.012C813.371 585.442 815.326 585.576 817.037 586.387L841.656 598.059C844.173 599.253 845.822 601.743 845.937 604.527L848.268 661.109C848.405 664.449 846.315 667.477 843.143 668.533L759.386 696.415C756.697 697.31 753.733 696.613 751.725 694.613L725.957 668.949C724.544 667.541 723.75 665.629 723.75 663.635V619.246C723.75 615.974 725.871 613.08 728.991 612.095Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="storm_catcher_border" d="M698.099 377.383L754.94 371.755C755.807 371.669 756.682 371.735 757.526 371.949L822.789 388.54C826.972 389.603 829.397 393.969 828.089 398.082L816.938 433.139C816.194 435.479 814.351 437.307 812.004 438.032L765.127 452.507C763.817 452.911 762.422 452.949 761.093 452.616L684.407 433.417C680.243 432.374 677.802 428.056 679.055 423.951L691.665 382.656C692.549 379.761 695.087 377.681 698.099 377.383Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="wall_border" d="M458.25 173.273V126.125C458.25 121.983 461.608 118.625 465.75 118.625H592.75C596.892 118.625 600.25 121.983 600.25 126.125V192.125C600.25 196.267 596.892 199.625 592.75 199.625H516.84C515.954 199.625 515.075 199.468 514.243 199.161L463.154 180.309C460.207 179.222 458.25 176.414 458.25 173.273Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="lightning_rod_border" d="M796.691 202.352L790.065 191.279C789.368 190.115 789 188.784 789 187.427V168.759C789 166.828 789.745 164.971 791.079 163.575L806.434 147.519C807.533 146.369 808.969 145.599 810.534 145.319L893.134 130.552C893.792 130.435 894.462 130.405 895.128 130.465L919.718 132.684C923.916 133.063 926.977 136.826 926.494 141.013L919.766 199.359C919.329 203.144 916.125 206 912.315 206H803.127C800.489 206 798.046 204.615 796.691 202.352Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="thunder_watch_border" d="M741.672 260.776L760.864 236.405C762.361 234.503 764.685 233.441 767.103 233.553L874.041 238.506C878.357 238.706 881.612 242.501 881.152 246.797L876.141 293.592C875.713 297.592 872.205 300.541 868.191 300.277L750.312 292.516C746.835 292.287 743.973 289.693 743.405 286.255L740.164 266.639C739.821 264.56 740.368 262.432 741.672 260.776Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="highpoint_border" d="M686.737 93.8901L719.46 64.4823C721.355 62.7791 723.985 62.1546 726.444 62.8243L816.384 87.3234C820.664 88.489 823.002 93.0934 821.419 97.2365L810.791 125.055C810.275 126.406 809.379 127.579 808.211 128.433L766.235 159.125C764.496 160.396 762.295 160.859 760.191 160.394L690.133 144.924C686.697 144.165 684.25 141.119 684.25 137.6V99.4685C684.25 97.3404 685.154 95.3126 686.737 93.8901Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="command_center_border" d="M586.384 277.488L615.936 254.708C617.928 253.173 620.556 252.738 622.935 253.549L734.67 291.643C737.708 292.679 739.75 295.533 739.75 298.742V349.125C739.75 353.267 736.392 356.625 732.25 356.625H596.857C592.975 356.625 589.734 353.662 589.387 349.795L583.493 284.098C583.264 281.546 584.354 279.053 586.384 277.488Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="jurassic_border" d="M417.113 550.081L456.238 500.523C457.736 498.626 460.057 497.566 462.473 497.679L541.673 501.355C545.101 501.514 547.983 503.978 548.673 507.339L566.221 592.846C566.778 595.557 565.796 598.354 563.667 600.123L488.237 662.795C485.214 665.306 480.766 665.059 478.041 662.227L417.596 599.428C416.251 598.031 415.5 596.167 415.5 594.227V554.729C415.5 553.042 416.068 551.405 417.113 550.081Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="cascades_border" d="M405.973 376.667L485.131 346.74C486.82 346.102 488.683 346.094 490.377 346.719L554.074 370.203C558.291 371.758 560.203 376.646 558.16 380.649L532.49 430.951C531.614 432.668 530.111 433.981 528.292 434.619L497.444 445.443C496.172 445.889 494.802 445.985 493.48 445.718L407.145 428.337C403.643 427.632 401.125 424.556 401.125 420.984V383.683C401.125 380.564 403.055 377.77 405.973 376.667Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="checkpoint_border" d="M261.145 311.873L309.468 287.821C311.468 286.826 313.807 286.774 315.849 287.678L368.859 311.167C371.965 312.543 373.758 315.834 373.23 319.19L359.285 407.804C358.876 410.407 357.13 412.604 354.687 413.592L288.833 440.209C287.552 440.726 286.154 440.88 284.792 440.654L241.184 433.403C236.988 432.705 234.212 428.661 235.068 424.495L257.14 317.077C257.604 314.819 259.081 312.9 261.145 311.873Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="bean_border" d="M204.782 550.626L250.435 543.335C251.305 543.196 252.192 543.211 253.057 543.38L303.701 553.278C308.07 554.131 310.738 558.581 309.433 562.837L295.784 607.346C295.059 609.711 293.213 611.566 290.852 612.305L234.372 629.969C232.755 630.475 231.015 630.418 229.434 629.808L181.405 611.28C177.339 609.711 175.461 605.018 177.324 601.078L199.184 554.827C200.242 552.589 202.337 551.016 204.782 550.626Z" fill="#00FF19" fill-opacity="0.2"/>
+<path id="barometer_border" d="M426.681 767.394L407.337 806.191C406.262 808.347 404.216 809.856 401.838 810.246L299.282 827.052C295.885 827.609 292.544 825.781 291.182 822.619L267.688 768.087C266.78 765.979 266.887 763.572 267.978 761.553L323.128 659.513C324.565 656.855 327.457 655.318 330.464 655.615L392.605 661.754C395.64 662.054 398.192 664.162 399.058 667.087L427.16 761.917C427.7 763.738 427.529 765.695 426.681 767.394Z" fill="#00FF19" fill-opacity="0.2"/>
+<g id="north_pad_back">
+<rect x="214.75" y="179.625" width="91.75" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="downed_beast_back">
+<rect x="68.875" y="307.375" width="117.5" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="mill_back">
+<rect x="138.5" y="468.25" width="48" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="cenote_back">
+<rect x="130" y="693.75" width="65" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="shipfall_back">
+<rect x="458" y="879.75" width="76.75" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="antenna_back">
+<rect x="553.75" y="692.75" width="76.75" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="fish_farms_back">
+<rect x="777.75" y="804" width="96.75" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="gale_station_back">
+<rect x="605.25" y="809.5" width="99.25" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="launch_pad_back">
+<rect x="736.5" y="627" width="99.25" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="storm_catcher_back">
+<rect x="695" y="398" width="117.25" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="wall_back">
+<rect x="502.75" y="144.75" width="53.25" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="lightning_rod_back">
+<rect x="799.5" y="160" width="112.75" height="29.25" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="thunder_watch_back">
+<rect x="748.5" y="252.5" width="124.5" height="29.25" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="highpoint_back">
+<rect x="714.25" y="100.25" width="84.25" height="29.25" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="command_center_back">
+<rect x="595.5" y="298.25" width="138.75" height="29.25" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="jurassic_back">
+<rect x="455" y="568" width="73" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="cascades_back">
+<rect x="439.5" y="381.5" width="84.25" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="checkpoint_back">
+<rect x="256" y="349" width="95" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="bean_back">
+<rect x="218" y="573" width="50" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<g id="barometer_back">
+<rect x="304" y="725" width="96" height="29" rx="3.75" fill="black" fill-opacity="0.7"/>
+</g>
+<text id="north_pad_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="225.453" y="199.172">North Pad</tspan></text>
+<text id="downed_beast_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="75.5547" y="326.922">Downed Beast</tspan></text>
+<text id="mill_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="150.742" y="487.797">Mill</tspan></text>
+<text id="cenote_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="136.43" y="713.297">Cenote</tspan></text>
+<text id="shipfall_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="470.734" y="899.297">Shipfall</tspan></text>
+<text id="antenna_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="562.422" y="712.297">Antenna</tspan></text>
+<text id="fish_farms_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="786.977" y="823.547">Fish Farms</tspan></text>
+<text id="gale_station_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="611.68" y="829.047">Gale Station</tspan></text>
+<text id="launch_pad_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="743.766" y="646.547">Launch Pad</tspan></text>
+<text id="storm_catcher_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="701.898" y="417.547">Storm Catcher</tspan></text>
+<text id="wall_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="514.977" y="164.297">Wall</tspan></text>
+<text id="lightning_rod_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="807.078" y="179.797">Lightning Rod</tspan></text>
+<text id="thunder_watch_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="756.562" y="272.297">Thunder Watch</tspan></text>
+<text id="highpoint_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="723.164" y="120.047">Highpoint</tspan></text>
+<text id="command_center_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="602.07" y="318.047">Command Center</tspan></text>
+<text id="jurassic_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="463.148" y="587.547">Jurassic</tspan></text>
+<text id="cascades_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="445.656" y="401.047">Cascades</tspan></text>
+<text id="checkpoint_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="263.945" y="368.797">Checkpoint</tspan></text>
+<text id="bean_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="224.305" y="592.047">Bean</tspan></text>
+<text id="barometer_text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="16" letter-spacing="0em"><tspan x="314.883" y="744.297">Barometer</tspan></text>
+</g>
+</svg>

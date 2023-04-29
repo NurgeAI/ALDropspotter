@@ -27,14 +27,9 @@ namespace ALDropspotter.Views
             InitializeComponent();
         }
 
-        public string MapImagePath { get; set; } = "/img/mp_rr_tropic_island_mu1.png";
-        // Dictionary with map names as keys and image paths as values
-        public Dictionary<String, String> MapImagePaths = new()
-        {
-            { "Storm Point", "/img/mp_rr_tropic_island_mu1.png"},
-            { "Worlds Edge", "/img/mp_rr_desertlands_mu4.png"}
-        };
-        public string LobbyImagePath { get; set; }
+        private string MapImagePath;
+        private string MapBoundaryImagePath;
+        private string LobbyImagePath;
         private ImageProcessingService imageProcessor = new();
         private DropspotMatchingService dropspotMatcher = new();
 
@@ -53,16 +48,9 @@ namespace ALDropspotter.Views
             // Get dropspot matches (everything else)
             Dictionary<String, String> dropspots = lobbyText.Where(x => x.Key.StartsWith("team_")).ToDictionary(x => x.Key, x => x.Value);
 
-            // Loop over all dropspots and print them
-            Debug.WriteLine("Dropspots:");
-            foreach (KeyValuePair<String, String> dropspot in dropspots)
-            {
-                Debug.WriteLine(dropspot.Key + ": " + dropspot.Value);
-            }
-
-
             // Match the dropspots
             Dictionary<String, String> matchedValues = dropspotMatcher.GetDropspotMatches(mapName, dropspots);
+
             // Loop over all dropspots and print them
             Debug.WriteLine("Matched values:");
             foreach (KeyValuePair<String, String> dropspot in matchedValues)
@@ -72,6 +60,7 @@ namespace ALDropspotter.Views
 
             // Get the free dropspots
             Dictionary<String, String> freeDropspots = dropspotMatcher.GetFreeDropspots(matchedValues);
+
             // Loop over all dropspots and print them
             Debug.WriteLine("Free dropspots:");
             foreach (KeyValuePair<String, String> dropspot in freeDropspots)
@@ -79,13 +68,78 @@ namespace ALDropspotter.Views
                 Debug.WriteLine(dropspot.Value);
             }
 
+            // Get map png file
+            MapImagePath = dropspotMatcher.MapImagePaths[matchedValues["map_name"]];
+            Debug.WriteLine(MapImagePath);
+
+            // Print current path
+            Debug.WriteLine(System.IO.Directory.GetCurrentDirectory());
+
             // Display the map
-            //BitmapImage bitmapImage = new BitmapImage();
-            //bitmapImage.BeginInit();
-            //bitmapImage.UriSource = new Uri(MapImagePath);
-            //bitmapImage.EndInit();
-            //ImageElement.Source = bitmapImage;
+            //Image stormPointImage = (Image)FindName("map_img");
+            //stormPointImage.Source = new BitmapImage(new Uri(MapImagePath));
+
+            // Loop over all matched dropspots
+            foreach (KeyValuePair<String, String> dropspot in matchedValues)
+            {
+                // Check if the dropspot is the map name or none
+                if (dropspot.Key == "map_name" || dropspot.Value == "none")
+                {
+                    // Skip the map name
+                    continue;
+                }
+
+                // Get the name of the dropspot
+                String dropspotName = dropspot.Value;
+
+                // Concatenate the name of the dropspot with "border"
+                String dropspotBorderName = dropspotName + "_border";
+
+                // Search for the border of the dropspot in the image
+                Path dropspotBorder = (Path)FindName(dropspotBorderName);
+
+                // Check if dropspotBorder exists
+                if (dropspotBorder == null)
+                {
+                    Debug.WriteLine("Dropspot border not found: " + dropspotBorderName);
+                }
+
+
+                // Edit the color of the border to ##33FF0000
+                dropspotBorder.Fill = new SolidColorBrush(Color.FromArgb(0x33, 0xFF, 0x00, 0x00));
+            }
+
+            // Loop over all free dropspots
+            foreach (KeyValuePair<String, String> dropspot in freeDropspots)
+            {
+                // Check if the dropspot is the map name or none
+                if (dropspot.Key == "map_name" || dropspot.Value == "none")
+                {
+                    // Skip the map name
+                    continue;
+                }
+
+                // Get the name of the dropspot
+                String dropspotName = dropspot.Key;
+
+                // Concatenate the name of the dropspot with "border"
+                String dropspotBorderName = dropspotName + "_border";
+
+                // Search for the border of the dropspot in the image
+                Path dropspotBorder = (Path)FindName(dropspotBorderName);
+
+                // Check if dropspotBorder exists
+                if (dropspotBorder == null)
+                {
+                    Debug.WriteLine("Dropspot border not found: " + dropspotBorderName);
+                }
+
+                // Edit the color of the border to #3300FF19
+                dropspotBorder.Fill = new SolidColorBrush(Color.FromArgb(0x33, 0x00, 0xFF, 0x19));
+
+                // Add dropspot to sidebar
+                FreeDropspotsList.Items.Add(dropspot.Value);
+            }
         }
     }
-
 }

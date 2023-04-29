@@ -1,18 +1,136 @@
-﻿<Page x:Class="ALDropspotter.Views.ImagePage"
+﻿<Page x:Name="Map" x:Class="ALDropspotter.Views.ImagePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ALDropspotter.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="500"
-      Title="ImagePage">
+      d:DesignHeight="500" d:DesignWidth="650"
+      ShowsNavigationUI="False">
 
     <Page.Background>
         <SolidColorBrush Color="#1D2335" />
     </Page.Background>
-
     <Grid>
-        <Image x:Name="ImageElement" Stretch="Uniform" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+        <Viewbox Stretch="Uniform" Grid.ColumnSpan="2" Margin="0,0,143,0">
+            <Canvas Width="1024" Height="1024">
+                <Canvas>
+                    <Canvas Name="stormpoint">
+                        <Path Name="north_pad_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M171.891,199.972L211.345,105.508C212.739,102.171,216.315,100.304,219.849,101.067L333.61,125.64C336.695,126.306,339.033,128.833,339.459,131.96L350.435,212.673C350.851,215.734,349.347,218.738,346.646,220.239L246.186,276.062C243.205,277.719,239.481,277.155,237.123,274.69L173.391,208.046C171.331,205.892,170.742,202.723,171.891,199.972z"/>
+                        <Path Name="downed_beast_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M47.4608,342.258L100.207,250.81C101.923,247.834,105.44,246.405,108.745,247.34L198.795,272.818C202.627,273.902,204.943,277.79,204.072,281.676L184.811,367.564C184.372,369.522,183.166,371.223,181.463,372.286L143.833,395.765C141.608,397.152,138.821,397.278,136.481,396.096L50.5758,352.699C46.733,350.758,45.3097,345.987,47.4608,342.258z"/>
+                        <Path Name="mill_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M98.6002,499.819L127.478,432.541C128.985,429.03,132.89,427.213,136.546,428.322L222.846,454.483C226.6,455.621,228.843,459.459,227.992,463.287L216.543,514.807C216.042,517.059,214.533,518.955,212.451,519.949L175.293,537.674C173.357,538.597,171.12,538.647,169.145,537.813L102.573,509.686C98.7422,508.067,96.9598,503.64,98.6002,499.819z"/>
+                        <Path Name="cenote_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M85.5736,746.854L140.501,639.005C142.319,635.434,146.623,633.924,150.274,635.575L236.003,674.336C239.84,676.071,241.497,680.625,239.672,684.42L202.019,762.727C201.129,764.578,199.519,765.982,197.565,766.614L146.644,783.065C144.788,783.665,142.772,783.518,141.022,782.656L88.9409,756.985C85.1911,755.136,83.6764,750.579,85.5736,746.854z"/>
+                        <Path Name="shipfall_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M415.631,924.674L507.902,819.253C510.106,816.735,513.712,815.982,516.739,817.407L575.929,845.261C580.1,847.224,581.53,852.45,578.938,856.263L502.81,968.262C500.754,971.287,496.816,972.388,493.49,970.867L418.157,936.435C413.591,934.348,412.324,928.452,415.631,924.674z"/>
+                        <Path Name="antenna_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M542.421,638.275L661.013,665.339C666.269,666.538,668.58,672.725,665.4,677.077L613.694,747.821C612.833,748.998,611.648,749.899,610.284,750.413L546.614,774.408C541.787,776.227,536.608,772.744,536.472,767.587L533.255,645.785C533.126,640.89,537.647,637.185,542.421,638.275z"/>
+                        <Path Name="fish_farms_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M752.869,789.125L789.623,761.504C790.923,760.528,792.504,760,794.129,760L916.801,760C920.773,760,924.056,763.097,924.288,767.062L927.966,829.889C928.139,832.846,926.556,835.627,923.926,836.988L835.032,883.004C833.477,883.809,831.688,884.045,829.977,883.669L755.768,867.392C752.327,866.638,749.875,863.59,749.875,860.067L749.875,795.121C749.875,792.762,750.984,790.542,752.869,789.125z"/>
+                        <Path Name="gale_station_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M600.301,799.7L667.16,775.266C669.345,774.468,671.777,774.728,673.743,775.971L706.234,796.514C708.213,797.765,709.494,799.87,709.697,802.203L713.812,849.464C714.077,852.508,712.469,855.408,709.747,856.796L678.714,872.619C677.124,873.43,675.296,873.647,673.56,873.231L601.128,855.878C597.754,855.07,595.375,852.054,595.375,848.585L595.375,806.744C595.375,803.595,597.343,800.781,600.301,799.7z"/>
+                        <Path Name="launch_pad_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M728.991,612.095L811.565,586.012C813.371,585.442,815.326,585.576,817.037,586.387L841.656,598.059C844.173,599.253,845.822,601.743,845.937,604.527L848.268,661.109C848.405,664.449,846.315,667.477,843.143,668.533L759.386,696.415C756.697,697.31,753.733,696.613,751.725,694.613L725.957,668.949C724.544,667.541,723.75,665.629,723.75,663.635L723.75,619.246C723.75,615.974,725.871,613.08,728.991,612.095z"/>
+                        <Path Name="storm_catcher_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M698.099,377.383L754.94,371.755C755.807,371.669,756.682,371.735,757.526,371.949L822.789,388.54C826.972,389.603,829.397,393.969,828.089,398.082L816.938,433.139C816.194,435.479,814.351,437.307,812.004,438.032L765.127,452.507C763.817,452.911,762.422,452.949,761.093,452.616L684.407,433.417C680.243,432.374,677.802,428.056,679.055,423.951L691.665,382.656C692.549,379.761,695.087,377.681,698.099,377.383z"/>
+                        <Path Name="wall_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M458.25,173.273L458.25,126.125C458.25,121.983,461.608,118.625,465.75,118.625L592.75,118.625C596.892,118.625,600.25,121.983,600.25,126.125L600.25,192.125C600.25,196.267,596.892,199.625,592.75,199.625L516.84,199.625C515.954,199.625,515.075,199.468,514.243,199.161L463.154,180.309C460.207,179.222,458.25,176.414,458.25,173.273z"/>
+                        <Path Name="lightning_rod_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M796.691,202.352L790.065,191.279C789.368,190.115,789,188.784,789,187.427L789,168.759C789,166.828,789.745,164.971,791.079,163.575L806.434,147.519C807.533,146.369,808.969,145.599,810.534,145.319L893.134,130.552C893.792,130.435,894.462,130.405,895.128,130.465L919.718,132.684C923.916,133.063,926.977,136.826,926.494,141.013L919.766,199.359C919.329,203.144,916.125,206,912.315,206L803.127,206C800.489,206,798.046,204.615,796.691,202.352z"/>
+                        <Path Name="thunder_watch_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M741.672,260.776L760.864,236.405C762.361,234.503,764.685,233.441,767.103,233.553L874.041,238.506C878.357,238.706,881.612,242.501,881.152,246.797L876.141,293.592C875.713,297.592,872.205,300.541,868.191,300.277L750.312,292.516C746.835,292.287,743.973,289.693,743.405,286.255L740.164,266.639C739.821,264.56,740.368,262.432,741.672,260.776z"/>
+                        <Path Name="high_point_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M686.737,93.8901L719.46,64.4823C721.355,62.7791,723.985,62.1546,726.444,62.8243L816.384,87.3234C820.664,88.489,823.002,93.0934,821.419,97.2365L810.791,125.055C810.275,126.406,809.379,127.579,808.211,128.433L766.235,159.125C764.496,160.396,762.295,160.859,760.191,160.394L690.133,144.924C686.697,144.165,684.25,141.119,684.25,137.6L684.25,99.4685C684.25,97.3404,685.154,95.3126,686.737,93.8901z"/>
+                        <Path Name="command_center_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M586.384,277.488L615.936,254.708C617.928,253.173,620.556,252.738,622.935,253.549L734.67,291.643C737.708,292.679,739.75,295.533,739.75,298.742L739.75,349.125C739.75,353.267,736.392,356.625,732.25,356.625L596.857,356.625C592.975,356.625,589.734,353.662,589.387,349.795L583.493,284.098C583.264,281.546,584.354,279.053,586.384,277.488z"/>
+                        <Path Name="jurassic_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M417.113,550.081L456.238,500.523C457.736,498.626,460.057,497.566,462.473,497.679L541.673,501.355C545.101,501.514,547.983,503.978,548.673,507.339L566.221,592.846C566.778,595.557,565.796,598.354,563.667,600.123L488.237,662.795C485.214,665.306,480.766,665.059,478.041,662.227L417.596,599.428C416.251,598.031,415.5,596.167,415.5,594.227L415.5,554.729C415.5,553.042,416.068,551.405,417.113,550.081z"/>
+                        <Path Name="cascades_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M405.973,376.667L485.131,346.74C486.82,346.102,488.683,346.094,490.377,346.719L554.074,370.203C558.291,371.758,560.203,376.646,558.16,380.649L532.49,430.951C531.614,432.668,530.111,433.981,528.292,434.619L497.444,445.443C496.172,445.889,494.802,445.985,493.48,445.718L407.145,428.337C403.643,427.632,401.125,424.556,401.125,420.984L401.125,383.683C401.125,380.564,403.055,377.77,405.973,376.667z"/>
+                        <Path Name="checkpoint_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M261.145,311.873L309.468,287.821C311.468,286.826,313.807,286.774,315.849,287.678L368.859,311.167C371.965,312.543,373.758,315.834,373.23,319.19L359.285,407.804C358.876,410.407,357.13,412.604,354.687,413.592L288.833,440.209C287.552,440.726,286.154,440.88,284.792,440.654L241.184,433.403C236.988,432.705,234.212,428.661,235.068,424.495L257.14,317.077C257.604,314.819,259.081,312.9,261.145,311.873z"/>
+                        <Path Name="bean_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M204.782,550.626L250.435,543.335C251.305,543.196,252.192,543.211,253.057,543.38L303.701,553.278C308.07,554.131,310.738,558.581,309.433,562.837L295.784,607.346C295.059,609.711,293.213,611.566,290.852,612.305L234.372,629.969C232.755,630.475,231.015,630.418,229.434,629.808L181.405,611.28C177.339,609.711,175.461,605.018,177.324,601.078L199.184,554.827C200.242,552.589,202.337,551.016,204.782,550.626z"/>
+                        <Path Name="barometer_border" Fill="#3300FF19" StrokeThickness="1" Data="F1M426.681,767.394L407.337,806.191C406.262,808.347,404.216,809.856,401.838,810.246L299.282,827.052C295.885,827.609,292.544,825.781,291.182,822.619L267.688,768.087C266.78,765.979,266.887,763.572,267.978,761.553L323.128,659.513C324.565,656.855,327.457,655.318,330.464,655.615L392.605,661.754C395.64,662.054,398.192,664.162,399.058,667.087L427.16,761.917C427.7,763.738,427.529,765.695,426.681,767.394z"/>
+                        <Canvas Name="north_pad_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="91.75" Height="29" Canvas.Left="214.75" Canvas.Top="179.625"/>
+                        </Canvas>
+                        <Canvas Name="downed_beast_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="117.5" Height="29" Canvas.Left="68.875" Canvas.Top="307.375"/>
+                        </Canvas>
+                        <Canvas Name="mill_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="48" Height="29" Canvas.Left="138.5" Canvas.Top="468.25"/>
+                        </Canvas>
+                        <Canvas Name="cenote_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="65" Height="29" Canvas.Left="130" Canvas.Top="693.75"/>
+                        </Canvas>
+                        <Canvas Name="shipfall_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="76.75" Height="29" Canvas.Left="458" Canvas.Top="879.75"/>
+                        </Canvas>
+                        <Canvas Name="antenna_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="76.75" Height="29" Canvas.Left="553.75" Canvas.Top="692.75"/>
+                        </Canvas>
+                        <Canvas Name="fish_farms_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="96.75" Height="29" Canvas.Left="777.75" Canvas.Top="804"/>
+                        </Canvas>
+                        <Canvas Name="gale_station_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="99.25" Height="29" Canvas.Left="605.25" Canvas.Top="809.5"/>
+                        </Canvas>
+                        <Canvas Name="launch_pad_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="99.25" Height="29" Canvas.Left="736.5" Canvas.Top="627"/>
+                        </Canvas>
+                        <Canvas Name="storm_catcher_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="117.25" Height="29" Canvas.Left="695" Canvas.Top="398"/>
+                        </Canvas>
+                        <Canvas Name="wall_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="53.25" Height="29" Canvas.Left="502.75" Canvas.Top="144.75"/>
+                        </Canvas>
+                        <Canvas Name="lightning_rod_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="112.75" Height="29.25" Canvas.Left="799.5" Canvas.Top="160"/>
+                        </Canvas>
+                        <Canvas Name="thunder_watch_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="124.5" Height="29.25" Canvas.Left="748.5" Canvas.Top="252.5"/>
+                        </Canvas>
+                        <Canvas Name="high_point_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="89" Height="30" Canvas.Left="708" Canvas.Top="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Canvas>
+                        <Canvas Name="command_center_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="138.75" Height="29.25" Canvas.Left="595.5" Canvas.Top="298.25"/>
+                        </Canvas>
+                        <Canvas Name="jurassic_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="73" Height="29" Canvas.Left="455" Canvas.Top="568"/>
+                        </Canvas>
+                        <Canvas Name="cascades_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="84.25" Height="29" Canvas.Left="439.5" Canvas.Top="381.5"/>
+                        </Canvas>
+                        <Canvas Name="checkpoint_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="95" Height="29" Canvas.Left="256" Canvas.Top="349"/>
+                        </Canvas>
+                        <Canvas Name="bean_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="50" Height="29" Canvas.Left="218" Canvas.Top="573"/>
+                        </Canvas>
+                        <Canvas Name="barometer_back">
+                            <Rectangle RadiusX="3.75" RadiusY="3.75" Fill="#B2000000" Width="96" Height="29" Canvas.Left="304" Canvas.Top="725"/>
+                        </Canvas>
+                        <TextBlock Name="north_pad_text" Text="North Pad" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="225.453" Canvas.Top="184.425333333333"/>
+                        <TextBlock Name="downed_beast_text" Text="Downed Beast" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="75.5547" Canvas.Top="312.175333333333"/>
+                        <TextBlock Name="mill_text" Text="Mill" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="150.742" Canvas.Top="473.050333333333"/>
+                        <TextBlock Name="cenote_text" Text="Cenote" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="136.43" Canvas.Top="698.550333333333"/>
+                        <TextBlock Name="shipfall_text" Text="Shipfall" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="470.734" Canvas.Top="884.550333333333"/>
+                        <TextBlock Name="antenna_text" Text="Antenna" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="562.422" Canvas.Top="697.550333333333"/>
+                        <TextBlock Name="fish_farms_text" Text="Fish Farms" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="786.977" Canvas.Top="808.800333333333"/>
+                        <TextBlock Name="gale_station_text" Text="Gale Station" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="611.68" Canvas.Top="814.300333333333"/>
+                        <TextBlock Name="launch_pad_text" Text="Launch Pad" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="743.766" Canvas.Top="631.800333333333"/>
+                        <TextBlock Name="storm_catcher_text" Text="Storm Catcher" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="701.898" Canvas.Top="402.800333333333"/>
+                        <TextBlock Name="wall_text" Text="Wall" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="514.977" Canvas.Top="149.550333333333"/>
+                        <TextBlock Name="lightning_rod_text" Text="Lightning Rod" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="807.078" Canvas.Top="165.050333333333"/>
+                        <TextBlock Name="thunder_watch_text" Text="Thunder Watch" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="756.562" Canvas.Top="257.550333333333"/>
+                        <TextBlock Name="high_point_text" Text="High Point" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="716" Canvas.Top="105" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Name="command_center_text" Text="Command Center" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="602.07" Canvas.Top="303.300333333333"/>
+                        <TextBlock Name="jurassic_text" Text="Jurassic" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="463.148" Canvas.Top="572.800333333333"/>
+                        <TextBlock Name="cascades_text" Text="Cascades" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="445.656" Canvas.Top="386.300333333333"/>
+                        <TextBlock Name="checkpoint_text" Text="Checkpoint" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="263.945" Canvas.Top="354.050333333333"/>
+                        <TextBlock Name="bean_text" Text="Bean" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="224.305" Canvas.Top="577.300333333333"/>
+                        <TextBlock Name="barometer_text" Text="Barometer" FontFamily="Arial" FontSize="16" Foreground="White" Canvas.Left="314.883" Canvas.Top="729.550333333333"/>
+                        <!-- Image -->
+                        <Image Name="map_img" Source="/img/mp_rr_tropic_island_mu1.png" Width="1024" Height="1024" Canvas.Left="0" Canvas.Top="0" Panel.ZIndex="-1"/>
+                    </Canvas>
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+        <StackPanel Grid.Column="1" Margin="57,0,10,10" VerticalAlignment="Center" HorizontalAlignment="Left" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <Border Background="#00191C25" Padding="5,5,5,5" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                <TextBlock Text="Free Dropspots:" FontFamily="Arial Rounded MT Bold" FontSize="15" Foreground="White" FontWeight="Bold" Margin="0,0.2,0,0" />
+            </Border>
+            <ListBox x:Name="FreeDropspotsList" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#00191C25" FontFamily="Arial" Foreground="White" FontSize="15" FontWeight="Bold" Padding="0,10,0,0" BorderBrush="#00ABADB3" Focusable="False" IsTextSearchEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Disabled" />
+        </StackPanel>
     </Grid>
 </Page>

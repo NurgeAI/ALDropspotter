@@ -9,6 +9,13 @@ namespace ALDropspotter.Services
 {
     internal class DropspotMatchingService
     {
+        // Dictionary with each map and their png file
+        public Dictionary<string, string> MapImagePaths = new()
+        {
+            { "stormpoint", "/Views/mp_rr_tropic_island_mu1_1024.png" },
+            { "worldsedge", "/Views/mp_rr_desertlands_mu4_1024.png" }
+        };
+
         // Dictionary with each map's dropspots and their corresponding name
         public static Dictionary<string, Dictionary<string, string>> Dropspots = new()
         {
@@ -61,8 +68,8 @@ namespace ALDropspotter.Services
                     {"bean", "bean"},
                     {"nonamemill", "bean"},
                     {"millnoname", "bean"},
-                    {"cenotecave", "cenote_cave"},
-                    {"cenote", "cenote_cave"},
+                    {"cenotecave", "cenote"},
+                    {"cenote", "cenote"},
                     {"cave", "cenote_cave"},
                     {"barometer", "barometer" },
                     {"baro", "barometer" },
