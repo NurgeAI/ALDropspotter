@@ -8,8 +8,7 @@
       d:DesignHeight="500" d:DesignWidth="650"
       AllowDrop="True"
       DragEnter="Image_DragEnter"
-      Drop="Image_Drop"
-      ShowsNavigationUI="False">
+      Drop="Image_Drop">
 
     <Page.Background>
         <SolidColorBrush Color="#1D2335" />
